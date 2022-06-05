@@ -6,11 +6,11 @@ async function getProducts(req, res) {
   });
 }
 
-function createProduct(req, res) {
+async function createProduct(req, res) {
   const { name, description } = req.body;
 
   try {
-    Product.create({
+    await Product.create({
       name: name,
       description: description,
     });

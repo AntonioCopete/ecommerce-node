@@ -5,7 +5,7 @@ const { default: helmet } = require("helmet");
 const cors = require("cors");
 
 const CONFIG = require("./config/config");
-const { ProductRouter, UserRouter } = require("./routes");
+const { ProductRouter, UserRouter, CategoryRouter } = require("./routes");
 
 const app = express();
 
@@ -32,5 +32,6 @@ app.use(
 
 app.use("/auth", UserRouter);
 app.use("/products", ProductRouter);
+app.use("/category", CategoryRouter);
 
 module.exports = app;

@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const { DB_URL, PORT, CLIENT_URL } = process.env;
+const { DB_URL, PORT, CLIENT_URL, STORE_API } = process.env;
 
 const CONFIG = {
   APP: {
@@ -13,6 +13,9 @@ const CONFIG = {
   },
   CLIENT: {
     URL: CLIENT_URL,
+  },
+  STORE_API: {
+    URL: STORE_API,
   },
   SECRET: "ecommerce-api",
 };
